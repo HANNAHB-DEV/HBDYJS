@@ -1,8 +1,8 @@
 // ==================================================== HBD text
 
 let target = document.getElementById("HBD-text");
-let stringArr = ["종석씨 생일 정말 축하해요 ♥", "Happy Birthday, LuiGee.",
- "귀요미의 생일을 축하합니다!", "추운 겨울의 선물이에요.", "행복한 12월 21일이 되기를."];
+let stringArr = ["추운 겨울의 선물이에요.", "행복한 12월 21일이 되기를.",
+	 "귀요미의 생일을 축하합니다!", "종석씨 생일 정말 축하해요 ♥", "Happy Birthday, LuiGee."];
 
 // 배열 크기 미만인 값까지 가져옴
 let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
@@ -11,8 +11,8 @@ let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
 let selectStringArr = selectString.split(""); 
 
 function randomString() {
-  let stringArr = 	["종석씨 생일 정말 축하해요 ♥", "Happy Birthday, LuiGee.",
-	 "귀요미의 생일을 축하합니다!", "추운 겨울의 선물이에요.", "행복한 12월 21일이 되기를."];
+  let stringArr = 	["추운 겨울의 선물이에요.", "행복한 12월 21일이 되기를.",
+	 "귀요미의 생일을 축하합니다!", "종석씨 생일 정말 축하해요 ♥", "Happy Birthday, LuiGee."];
   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
   let selectStringArr = selectString.split("");  
 
