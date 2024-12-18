@@ -226,8 +226,8 @@ body::-webkit-scrollbar {
 }
 
 #next-text {
-  /*position: absolute;
-  top: 75%;*/
+  position: absolute;
+  top: 75%;
   font-size: 0.9em;
   color: rgb(213, 221, 230);
   transition: all 0.4s;
