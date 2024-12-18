@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgb(17, 25, 44);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.displayNone {
+  display: none;
+}
+
+
+/* ===================================== title   */
+
+.text-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+#HBD-text {
+  display: inline-block;
+  font-size: 1.7em;
+  color: #fff;
+  position: relative;
+}
+
+#HBD-text::after { 
+  display: block;
+  position: absolute;
+  top: 0; right: -10px;
+  width: 3px; height: 100%;
+  content: "";
+  background-color: #fff;
+}
+
+#HBD-text.remove::after {
+  display: none;
+}
+
+
+/* =========================================================== cake   */
+
+.cake-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+
+/* ============================================ candle   */
+
+#candle {
+  cursor: pointer;
+}
+
+.light {
+  position: absolute;
+  top: 12%; left: 50%;
+  width: 8px; height: 24px;
+  margin-left: -5px;
+  background: rgba(255, 213, 99, 0.8);
+  border-radius: 100%;
+  animation: smCandle 1s infinite alternate;
+}
+
+.light:nth-child(2) {
+  box-shadow: 0 0 30px 5px rgba(245, 139, 112, 0.6);
+  animation: backLight1 1s infinite alternate;  
+}
+
+.light:nth-child(3) {
+  box-shadow: 0 0 30px 15px rgba(255, 209, 157, 0.5);
+  animation: backLight2 1s infinite alternate;
+}
+
+.light:nth-child(4) {
+  border-radius: 100%;
+  box-shadow:0 0 35px 20px rgba(249, 255, 222, 0.3);
+  animation: backLight2 0.2s infinite alternate;
+}
+
+#candle-body {
+  position: absolute;
+  top: 22%; left: 50%;
+  margin-left: -5px;
+  width: 8px; height: 36px;
+  border-radius: 2px;
+  background-color: rgb(253, 167, 200);
+  animation: candleBody 1s alternate;
+}
+
+
+/* ============================================== Candle Animation */
+
+@keyframes candleBody {
+  0% {
+    transform: translateY(-800px);
+  }
+}
+
+@keyframes candleLight {
+  0% {
+    transform: translateY(-800px);
+  }
+}
+
+@keyframes smCandle {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+   
+  }
+  50% {
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes backLight1 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+   
+  }
+  50% {
+    transform: translateY(0) scale(0);
+  }
+}
+
+@keyframes backLight2 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+   
+  }
+  50% {
+    transform: translateY(0) scale(0.8);
+  }
+}
+
+/* ==================================== chiffons */
+
+.chiffons {
+  width: 160px; height: 300px;
+}
+
+#cream {
+  position: absolute;
+  width: 160px; height: 24px;
+  top: 33%;
+  background:#fff;
+  border-radius: 16px 16px 10px 10px;
+  animation: cream 1s;
+}
+
+#cream:after,
+#cream:before {
+  position:absolute;
+  width: 12px;
+  height: 32px;
+  content: "";
+  background:#fff;
+  border-radius: 100px;
+  animation: creams 1s forwards;
+}
+
+#cream::after {
+  top: 50%;
+  left: 20%;
+}
+
+#cream:before {
+  top: 80%;
+  left: 80%;
+}
+
+.chiffon {
+  position: absolute;
+  width: 160px; height: 20px;
+  background-color: rgb(255, 248, 246);
+  border-radius: 5px;
+  animation-name: chiffon 2s;
+}
+
+.chiffon:nth-child(2) {
+  top: 40%;
+  z-index: -1;
+  animation: chiffon 1s;
+}
+
+.chiffon:nth-child(3) {
+  top: 46.5%;
+  z-index: -2;
+  animation: chiffon 1s;
+}
+
+.chiffon:nth-child(4) {
+  top: 50%;
+  animation: chiffon 1s;
+}
+
+.chiffon:nth-child(5) {
+  top: 56.5%;
+  animation: chiffon 1s;
+}
+
+.chiffon:nth-child(6) {
+  top: 60%;
+  animation: chiffon 1s;
+}
+
+.chiffon:nth-of-type(2n-1) {
+  height: 10px;
+  border-radius: 3px;
+  background-color: #fa6f9d;
+}
+
+#cake-bottom {
+  position: absolute;
+  top: 66.5%;
+  width: 220px; height: 5px;
+  background-color: #a8cce9;
+  animation: cake-bottom 0.8s;
+}
+
+#next-text {
+  position: absolute;
+  top: 75%;
+  font-size: 0.9em;
+  color: rgb(45, 61, 80);
+  transition: all 0.4s;
+  animation: textDelay 20s;
+}
+
+#next-text:hover {
+  color: rgb(102, 128, 158);
+  animation: textAnimation 0.06s infinite alternate;
+}
+
+
+/* =========================================== cake animation */
+
+@keyframes textDelay {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+
+@keyframes cake-bottom {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* cake bounce */
+@keyframes chiffon {
+  0% {
+    transform: translateY(-800px) rotate(15deg);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px) rotate(3deg);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-10px) rotate(-3deg);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-5px) rotate(3deg);
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    transform: translateY(5px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px) rotate(-3deg);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+@keyframes cream {
+  0% {
+    transform: translateY(-800px);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes creams {
+  0% {
+    transform: scaleY(0) translateY(-60px);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+ 
