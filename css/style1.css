@@ -220,7 +220,7 @@ body::-webkit-scrollbar {
 #cake-bottom {
   position: absolute;
   top: 66.5%;
-  width: 220px; height: 50px;
+  width: 220px; height: 5px;
   background-color: #a8cce9;
   animation: cake-bottom 0.8s;
 }
@@ -230,6 +230,7 @@ body::-webkit-scrollbar {
   top: 75%;
   font-size: 0.9em;
   color: rgb(213, 221, 230);
+  text-align: center;
   transition: all 0.4s;
   animation: textDelay 20s;
 }
@@ -254,6 +255,29 @@ body::-webkit-scrollbar {
   }
   100% {
     transform: rotate(-2deg);
+  }
+}
+
+.typing-demo {
+  width: 750ch;
+  /* ch : 25개의 문자열을 포함 */
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
 }
 
