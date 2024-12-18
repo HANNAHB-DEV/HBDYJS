@@ -232,14 +232,8 @@ body::-webkit-scrollbar {
   color: rgb(213, 221, 230);
   text-align: center;
   transition: all 0.4s;
-  /*animation: textDelay 20s;*/
+  animation: textDelay 20s;
 }
-
-#next-text:hover {
-  color: rgb(102, 128, 158);
-  animation: textAnimation 0.06s infinite alternate;
-}
-
 
 /* =========================================== cake animation */
 
@@ -255,29 +249,6 @@ body::-webkit-scrollbar {
   }
   100% {
     transform: rotate(-2deg);
-  }
-}
-
-.typing-demo {
-  width: 750ch;
-  /* ch : 25개의 문자열을 포함 */
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
   }
 }
 
