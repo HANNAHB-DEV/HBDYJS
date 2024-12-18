@@ -232,7 +232,7 @@ body::-webkit-scrollbar {
   color: rgb(213, 221, 230);
   text-align: center;
   transition: all 0.4s;
-  animation: textDelay 20s;
+  /*animation: textDelay 20s;*/
 }
 
 #next-text:hover {
