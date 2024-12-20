@@ -11,8 +11,8 @@ let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
 let selectStringArr = selectString.split(""); 
 
 function randomString() {
-  let stringArr = 	["추운 겨울의 선물 :3", "행복한 12월 21일이 되기를.",
-	 "귀요미의 생일을 축하합니다!", "종석씨 생일 정말 축하해요 ♥", "Happy Birthday, LuiGee."];
+  let stringArr = 	["추운 겨울의 선물 ☃️", "행복한 12월 21일🎂",
+	 "귀요미의 생일을 축하합니다!", "종석씨 생일 정말 축하해요❤️", "Happy Birthday, LuiGee."];
   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
   let selectStringArr = selectString.split("");  
 
